@@ -22,7 +22,7 @@ public class leaderboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        /* challenger = findViewById(R.id.CHALLENGER);
+        challenger = findViewById(R.id.CHALLENGER);
         challenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +39,22 @@ public class leaderboard extends AppCompatActivity {
             }
         });
 
-         */
+        guild = findViewById(R.id.GUILD);
+        guild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(leaderboard.this, Guild.class);
+                startActivity(intent);
+            }
+        });
+        lanes = findViewById(R.id.LANES);
+        lanes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(leaderboard.this, Toplane.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
