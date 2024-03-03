@@ -1,4 +1,4 @@
-package com.example.test;
+package com.mopal.crudapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +22,7 @@ public class leaderboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
 
-        challenger = findViewById(R.id.CHALLENGER);
+        /* challenger = findViewById(R.id.CHALLENGER);
         challenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +38,8 @@ public class leaderboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+         */
 
     }
 }

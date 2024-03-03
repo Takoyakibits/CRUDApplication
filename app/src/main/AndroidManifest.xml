@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CRUDApplication"
         tools:targetApi="31">
+
+        <activity
+            android:name=".leaderboard"
+            android:exported="true" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.mopal.crudapplication.MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
