@@ -9,7 +9,7 @@ public class Deleteoperation {
     Button btndelete =findViewById(R.id.DELETE);
 
 
-    btndelete.setOnClickListener( new View.OnClickListener()){
+    btndelete.setOnClickListener(new View.OnClickListener()){
 
         public void onClick(View v){
             Connection connection = connectionclass();
