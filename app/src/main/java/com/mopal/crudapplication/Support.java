@@ -1,4 +1,4 @@
-package com.example.test;
+package com.mopal.crudapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 

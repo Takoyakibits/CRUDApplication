@@ -3,17 +3,19 @@ package com.mopal.crudapplication;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DeleteOperation {
 
     private Button btndelete;
+    private EditText idEditText;
 
-    public DeleteOperation(Button btndelete) {
+    public DeleteOperation(Button btndelete, EditText idEditText) {
         this.btndelete = btndelete;
+        this.idEditText = idEditText;
 
         this.btndelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,13 +25,12 @@ public class DeleteOperation {
         });
     }
 
-    // Logic for delete operation
     private void deleteOperation() {
         Connection connection = connectionclass();
         try {
             if (connection != null) {
-
-                String sqldelete = "DELETE id = '" + id.getText().toString() + "'";
+                String idValue = idEditText.getText().toString();
+                String sqldelete = "DELETE FROM YourTableName WHERE id = '" + idValue + "'";
                 try (Statement st = connection.createStatement()) {
                     int rowsAffected = st.executeUpdate(sqldelete);
 
@@ -46,7 +47,7 @@ public class DeleteOperation {
     }
 
     private Connection connectionclass() {
-
+        // Implement your connection logic here
         return null;
     }
 }

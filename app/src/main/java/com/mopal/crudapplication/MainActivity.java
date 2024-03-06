@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,13 +38,12 @@ public class MainActivity extends AppCompatActivity {
                                      ResultSet resultSet = statement.executeQuery()) {
 
                                     while (resultSet.next()) {
-
+                                        // Process the result set here
                                     }
                                 } catch (SQLException e) {
                                     e.printStackTrace();
                                 } finally {
                                     try {
-
                                         connection.close();
                                     } catch (SQLException e) {
                                         e.printStackTrace();
